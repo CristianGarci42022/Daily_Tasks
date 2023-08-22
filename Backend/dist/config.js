@@ -1,30 +1,36 @@
-import {config as dotenv} from "dotenv";
-dotenv();
+"use strict";
 
-export const DBTareas_Diarias = {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DBTareas_Diarias = exports.DBBiblioteca = void 0;
+var _dotenv = require("dotenv");
+(0, _dotenv.config)();
+var DBTareas_Diarias = {
   user: 'root',
   password: 'root',
   server: 'localhost',
   // port: 5800, // Cambia esto al puerto que estás utilizando
   database: 'Tareas_Diarias',
   options: {
-    encrypt: true, // for azure
+    encrypt: true,
+    // for azure
     trustServerCertificate: true // change to true for local dev / self-signed certs
   }
 };
-
-export const DBBiblioteca = {
+exports.DBTareas_Diarias = DBTareas_Diarias;
+var DBBiblioteca = {
   user: 'root',
   password: 'root',
   server: 'localhost',
   // port: 5800, // Cambia esto al puerto que estás utilizando
   database: 'Biblioteca',
   options: {
-    encrypt: true, // for azure
+    encrypt: true,
+    // for azure
     trustServerCertificate: true // change to true for local dev / self-signed certs
   }
 };
-
 
 // export const DBTareas_Diarias = {
 //   user: process.env.DB_HostTareasDiarias || 'user',
@@ -47,3 +53,4 @@ export const DBBiblioteca = {
 //     trustServerCertificate: true // change to true for local dev / self-signed certs
 //   }
 // };
+exports.DBBiblioteca = DBBiblioteca;

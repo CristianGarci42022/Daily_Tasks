@@ -5,3 +5,54 @@ Creacion de App react Native con Node sql serve
 *Instalar dependencias de Package.json-> npm init -y
 *Instalacion de Modulos a utilizar(dependencias de produccion ) -> npm i express mysql2 morgan cors swagger-jsdoc swagger-ui-express dotenv
 *instalar dependecias de desarrollo-> npm i nodemon @babel/core @babel/cli @babel/preset-env @babel/node -D
+
+
+
+
+create database Tareas_Diarias
+use Tareas_Diarias
+
+create table Tareas(
+	ID_Tareas INT PRIMARY KEY IDENTITY,
+    Titulo NVARCHAR(100) NOT NULL,
+	descripcion text,
+    
+)
+
+INSERT INTO Tareas (Titulo, descripcion)
+VALUES ('Tarea #1','Descripcion de tarea 1'),
+       ('Tarea #2','Descripcion de tarea 2');
+
+
+
+
+
+create database Biblioteca
+use Biblioteca
+CREATE TABLE Autores (
+    ID_Autor INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE Libros (
+    ID_Libro INT PRIMARY KEY IDENTITY,
+    Titulo NVARCHAR(100) NOT NULL,
+	Categoria NVARCHAR (100) NOT NULL,
+    ID_Autor INT REFERENCES Autores(ID_Autor)
+);
+
+CREATE TABLE Prestamos (
+    ID_Prestamo INT PRIMARY KEY IDENTITY,
+    ID_Libro INT REFERENCES Libros(ID_Libro),
+    Fecha_Prestamo DATE NOT NULL,
+    Fecha_Devolucion DATE
+);
+
+-- Insertar dos autores en la tabla Autores
+INSERT INTO Autores (Nombre)
+VALUES ('Nombre del Autor 1'),
+       ('Nombre del Autor 2');
+
+
+	   select * from Autores
