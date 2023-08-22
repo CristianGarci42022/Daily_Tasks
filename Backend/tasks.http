@@ -1,0 +1,37 @@
+//Con base de datos de Tareas_Diarias
+
+
+@api =  http://localhost:5800/tasks
+###
+GEt {{api}}
+
+###
+GEt {{api}}/Count
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "Titulo": "Tarea #3",
+    "descripcion": "Descripcion de la tarea #3"
+}
+
+###
+DELETE {{api}}/25
+
+###
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "Titulo": "Tarea # 101"
+    
+}
+
+
+//Con base de datos de Biblioteca
+
+# @api =  http://localhost:5800/Autores
+
+# GEt {{api}}
