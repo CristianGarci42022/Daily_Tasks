@@ -5,10 +5,15 @@ Creacion de App react Native con Node sql serve
 *Instalar dependencias de Package.json-> npm init -y
 *Instalacion de Modulos a utilizar(dependencias de produccion ) -> npm i express mysql2 morgan cors swagger-jsdoc swagger-ui-express dotenv
 *instalar dependecias de desarrollo-> npm i nodemon @babel/core @babel/cli @babel/preset-env @babel/node -D
+*Crear carpeta front-end
+*Para la creacion de la aplicacio react native Vamos a utilizar Expo (otras alternativas React native cli)
+*Instalar Expo(se instala dentro del pc para usar los comando de EXPO) -> npm install --global expo-cli
+*Crear Proyecto con Expo-> expo init nombre de carpeta
+*Instalamos un Modulo aparte de React Navegation ->npm install @react-navigation/native
+*Instalacion de Dependencias de React Navegation -> npx expo install react-native-screens react-native-safe-area-context	
 
 
-
-
+*Creacion de Base de datos con tablas 
 create database Tareas_Diarias
 use Tareas_Diarias
 
@@ -18,7 +23,7 @@ create table Tareas(
 	descripcion text,
     
 )
-
+*Insertando datos a mi tabla 
 INSERT INTO Tareas (Titulo, descripcion)
 VALUES ('Tarea #1','Descripcion de tarea 1'),
        ('Tarea #2','Descripcion de tarea 2');
